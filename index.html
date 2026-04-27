@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showRoom('sala1')">Sala 1: Renacimiento</a>
+        <a href="#" onclick="showRoom('sala2')">Sala 2: Arte Moderno</a>
+    </nav>
+
+    <div id="app">
+        <section id="sala1" class="room">
+            <h1>Bienvenido a la Sala 1</h1>
+            <p>Descripción de las obras clásicas.</p>
+        </section>
+        <section id="sala2" class="room" style="display:none;">
+            <h1>Bienvenido a la Sala 2</h1>
+            <p>Descripción del arte abstracto.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
