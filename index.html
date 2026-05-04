@@ -2,34 +2,38 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louvre: Recorrido Virtual</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-   
     <audio id="bgm" loop>
         <source src="assets/backgroundclassical.mp3" type="audio/mpeg">
     </audio>
 
+    <div class="background-container">
+        <img src="assets/Louvreday.png" id="bg-image">
+    </div>
+
     <header>
-        <h1>Museo del Louvre</h1>
+        <h1>MUSEO DEL LOUVRE</h1>
         <nav id="menu-salas">
             <a href="#" onclick="cambiarSala('entrada')">Entrada</a>
-            <a href="#" onclick="cambiarSala('monalisa')">Sala de los Estados</a>
-            <a href="#" onclick="cambiarSala('escultura')">Galería Griega</a>
+            <a href="#" onclick="cambiarSala('monalisa')">Mona Lisa</a>
+            <a href="#" onclick="cambiarSala('escultura')">Esculturas</a>
         </nav>
     </header>
 
     <main id="escena-contenedor">
         <div id="contenido">
-            <h2>Bienvenido al Recorrido</h2>
-            <p>Haz clic en una sala para comenzar la experiencia sonora y visual.</p>
+            <h2 id="sala-titulo">BIENVENIDO</h2>
+            <p id="sala-descripcion">Desliza el cursor para enfocar el arte.</p>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Recorrido Virtual by Daniel Astudillo. <a href="#" id="egg" onclick="triggerNadi()">.</a></p>
+        <p>2026 | Daniel Astudillo <a href="#" id="egg" onclick="triggerNadi()">.</a></p>
     </footer>
 
     <script src="script.js"></script>

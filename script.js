@@ -1,40 +1,53 @@
-// Base de datos de las salas
 const salas = {
     entrada: {
-        titulo: "La Pirámide",
-        texto: "Estás bajo la luz de la pirámide de cristal. El eco es profundo."
+        titulo: "LA PIRÁMIDE",
+        texto: "Luz natural sobre el gran vestíbulo.",
+        imagen: "assets/Louvreday.png"
     },
     monalisa: {
-        titulo: "La Gioconda",
-        texto: "Una mirada que te sigue en el silencio de la noche."
+        titulo: "MONA LISA",
+        texto: "La obra maestra de Da Vinci.",
+        imagen: "assets/monalisa.jpg"
     },
     escultura: {
-        titulo: "Victoria de Samotracia",
-        texto: "El mármol parece cobrar vida bajo las sombras."
+        titulo: "SAMOTRACIA",
+        texto: "La victoria alada en mármol.",
+        imagen: "assets/victoria.jpg"
     }
 };
 
-function cambiarSala(nombreSala) {
-    const contenedor = document.getElementById('contenido');
+function cambiarSala(id) {
     const audio = document.getElementById('bgm');
-    
+    const bgContainer = document.querySelector('.background-container');
+    const bgImage = document.getElementById('bg-image');
+    const titulo = document.getElementById('sala-titulo');
+    const desc = document.getElementById('sala-descripcion');
 
     if (audio.paused) audio.play();
 
-    contenedor.style.opacity = 0;
+    bgImage.style.opacity = 0;
 
     setTimeout(() => {
-        contenedor.innerHTML = `
-            <h2>${salas[nombreSala].titulo}</h2>
-            <p>${salas[nombreSala].texto}</p>
-        `;
-        contenedor.style.opacity = 1;
-    }, 500);
+        bgContainer.style.backgroundImage = `url('${salas[id].imagen}')`;
+        bgImage.src = salas[id].imagen;
+        titulo.innerText = salas[id].titulo;
+        desc.innerText = salas[id].texto;
+        bgImage.style.opacity = 1;
+    }, 400);
 }
 
-// EAST
+document.addEventListener('mousemove', (e) => {
+    const bgImage = document.getElementById(imagen/assets/Louvreday.png
+    );
+    if (bgImage) {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        bgImage.style.setProperty('--x', `${x}%`);
+        bgImage.style.setProperty('--y', `${y}%`);
+    }
+});
+
 function triggerNadi() {
-    console.log("Accediendo a registros antiguos...");
-    alert("NaDi se ha quedado en las sombras del Louvre. Gracias por el viaje.");
-    document.body.style.filter = "sepia(0.8) contrast(1.2)";
+    alert("NaDi se ha quedado en las sombras del Louvre.");
+    document.body.style.filter = "grayscale(1) brightness(0.8)";
 }
