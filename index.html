@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <title>Louvre: Recorrido Virtual</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="#" onclick="showRoom('sala1')">Sala 1: Renacimiento</a>
-        <a href="#" onclick="showRoom('sala2')">Sala 2: Arte Moderno</a>
-    </nav>
 
-    <div id="app">
-        <section id="sala1" class="room">
-            <h1>Bienvenido a la Sala 1</h1>
-            <p>Descripción de las obras clásicas.</p>
-        </section>
-        <section id="sala2" class="room" style="display:none;">
-            <h1>Bienvenido a la Sala 2</h1>
-            <p>Descripción del arte abstracto.</p>
-        </section>
-    </div>
+   
+    <audio id="bgm" loop>
+        <source src="assets/backgroundclassical.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+        <h1>Museo del Louvre</h1>
+        <nav id="menu-salas">
+            <a href="#" onclick="cambiarSala('entrada')">Entrada</a>
+            <a href="#" onclick="cambiarSala('monalisa')">Sala de los Estados</a>
+            <a href="#" onclick="cambiarSala('escultura')">Galería Griega</a>
+        </nav>
+    </header>
+
+    <main id="escena-contenedor">
+        <div id="contenido">
+            <h2>Bienvenido al Recorrido</h2>
+            <p>Haz clic en una sala para comenzar la experiencia sonora y visual.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Recorrido Virtual by Daniel Astudillo. <a href="#" id="egg" onclick="triggerNadi()">.</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
