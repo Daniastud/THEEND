@@ -2,40 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louvre: Recorrido Virtual</title>
+    <title>La Pirámide - Louvre</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <audio id="bgm" loop>
-        <source src="assets/backgroundclassical.mp3" type="audio/mpeg">
+    <a href="index.html" class="btn home-btn">🏠 Inicio</a>
+
+    <audio autoplay loop>
+        <source src="assets/eco_museo.mp3" type="audio/mpeg">
     </audio>
 
-    <div class="background-container">
-        <img src="assets/Louvreday.png" id="bg-image">
+    <div class="contenedor-escena">
+        <h1>La Pirámide de Cristal</h1>
+        
+        <img src="assets/louvreafuera.png" alt="Pirámide del Louvre" class="escena-img">
+
+        <p>
+            Te encuentras en la icónica estructura de cristal. El eco de los visitantes 
+            y la luz del sol crean un ambiente místico. Es hora de entrar a las galerías.
+        </p>
+
+        <a href="galeria.html" class="btn">Entrar a las Galerías</a>
     </div>
 
-    <header>
-        <h1>MUSEO DEL LOUVRE</h1>
-        <nav id="menu-salas">
-            <a href="#" onclick="cambiarSala('entrada')">Entrada</a>
-            <a href="#" onclick="cambiarSala('monalisa')">Mona Lisa</a>
-            <a href="#" onclick="cambiarSala('escultura')">Esculturas</a>
-        </nav>
-    </header>
-
-    <main id="escena-contenedor">
-        <div id="contenido">
-            <h2 id="sala-titulo">BIENVENIDO</h2>
-            <p id="sala-descripcion">Desliza el cursor para enfocar el arte.</p>
-        </div>
-    </main>
-
-    <footer>
-        <p>2026 | Daniel Astudillo <a href="#" id="egg" onclick="triggerNadi()">.</a></p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
